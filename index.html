@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+    <script type="text/javascript">
+        ymaps.ready(init);
+
+        function init () {
+  		
+			var img_path = 'http://perm.mcdir.ru/delme/';
+			
+            var myMap = new ymaps.Map("ymaps1366080694190856270", {
+                    center: [55.744121, 37.700947],
+                    zoom: 17,
+					type: 'yandex#hybrid',
+					behaviors: ['default', 'scrollZoom']
+                });
+			
+			myMap.controls.add('zoomControl');
+			myMap.controls.add('typeSelector');
+			myMap.controls.add('mapTools');
+
+			myPlacemark00 = new ymaps.Placemark([55.744415,  37.700630], {balloonContent: '<img src="'+ img_path + '00.JPG' + '" />'}, {preset: 'twirl#lightblueDotIcon'});
+			myPlacemark0 = new ymaps.Placemark([55.744161,  37.701643], {balloonContent: '<img src="'+ img_path + '0.JPG' + '" />'}, {preset: 'twirl#lightblueDotIcon'});
+			myPlacemark1 = new ymaps.Placemark([55.744259, 37.700670], {balloonContent: '<img src="'+ img_path + '1.JPG' + '" />'}, {preset: 'twirl#lightblueDotIcon'});
+			myPlacemark2 = new ymaps.Placemark([55.744202,  37.700331], {balloonContent: '<img src="'+ img_path + '2.JPG' + '" />'}, {preset: 'twirl#lightblueDotIcon'});
+			myPlacemark4 = new ymaps.Placemark([55.743717, 37.700484], {balloonContent: '<img src="'+ img_path + '4.JPG' + '" />'}, {preset: 'twirl#lightblueDotIcon'});
+			myPlacemark5 = new ymaps.Placemark([55.745717, 37.700784], {balloonContent: '<p>"Фаркоп-центр Столичный"</p>'}, {preset: 'twirl#lightblueDotIcon'});
+			myMap.geoObjects.add(myPlacemark00);
+			myMap.geoObjects.add(myPlacemark0);
+			myMap.geoObjects.add(myPlacemark1);
+			myMap.geoObjects.add(myPlacemark2);
+			myMap.geoObjects.add(myPlacemark4);
+			myMap.geoObjects.add(myPlacemark5);
+        }
+    </script>
+</head>
+
+<body>
+
+<div id="ymaps1366080694190856270" style="width: 600px; height: 450px;">
+
+</body>
+</html>
